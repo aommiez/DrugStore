@@ -1,40 +1,38 @@
-
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a href="#">Dashboard</a></li>
+        </ol>
+    </div>
+</div>
 <!--Start Dashboard 1-->
 <div id="dashboard-header" class="row">
     <div class="col-xs-10 col-sm-2">
         <h3>DASHBOARD!</h3>
     </div>
-    <div class="col-xs-2 col-sm-1 col-sm-offset-1">
-        <div id="social" class="row">
-            <a href="#"><i class="fa fa-google-plus"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-        </div>
-    </div>
+
     <div class="clearfix visible-xs"></div>
     <div class="col-xs-12 col-sm-8 col-md-7 pull-right">
         <div class="row">
             <div class="col-xs-4">
                 <div class="sparkline-dashboard" id="sparkline-1"></div>
                 <div class="sparkline-dashboard-info">
-                    <i class="fa fa-usd"></i>756.45M
-                    <span class="txt-primary">EBITDA</span>
+                    <i class="fa "></i>1,421 คน
+                    <span class="txt-primary">visit</span>
                 </div>
             </div>
             <div class="col-xs-4">
                 <div class="sparkline-dashboard" id="sparkline-2"></div>
                 <div class="sparkline-dashboard-info">
-                    <i class="fa fa-usd"></i>245.12M
-                    <span class="txt-info">OIBDA</span>
+                    <i class="fa"></i>12 คน
+                    <span class="txt-info">รอรับยา</span>
                 </div>
             </div>
             <div class="col-xs-4">
                 <div class="sparkline-dashboard" id="sparkline-3"></div>
                 <div class="sparkline-dashboard-info">
-                    <i class="fa fa-usd"></i>107.83M
-                    <span>REVENUE</span>
+                    <i class="fa"></i>52
+                    <span>รอตรวจ</span>
                 </div>
             </div>
         </div>
@@ -66,7 +64,7 @@
         <table id="ticker-table" class="table m-table table-bordered table-hover table-heading">
             <thead>
             <tr>
-                <th>Ticker</th>
+                <th>Drug Name</th>
                 <th>Price</th>
                 <th>Change</th>
                 <th>Weekly Chart</th>
