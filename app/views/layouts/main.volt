@@ -228,7 +228,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-bar-chart-o"></i>
-                        <span class="hidden-xs">Charts</span>
+                        <span class="hidden-xs">Menu 1</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="ajax-link" href="ajax/charts_xcharts.html">xCharts</a></li>
@@ -241,7 +241,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-table"></i>
-                        <span class="hidden-xs">Tables</span>
+                        <span class="hidden-xs">Menu 1</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="ajax-link" href="ajax/tables_simple.html">Simple Tables</a></li>
@@ -252,7 +252,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-pencil-square-o"></i>
-                        <span class="hidden-xs">Forms</span>
+                        <span class="hidden-xs">Menu 1</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="ajax-link" href="ajax/forms_elements.html">Elements</a></li>
@@ -263,7 +263,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-desktop"></i>
-                        <span class="hidden-xs">UI Elements</span>
+                        <span class="hidden-xs">Menu 1</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="ajax-link" href="ajax/ui_grid.html">Grid</a></li>
@@ -276,7 +276,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-list"></i>
-                        <span class="hidden-xs">Pages</span>
+                        <span class="hidden-xs">Menu 1</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="ajax/page_login.html">Login</a></li>
@@ -295,7 +295,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-map-marker"></i>
-                        <span class="hidden-xs">Maps</span>
+                        <span class="hidden-xs">Menu 1</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="ajax-link" href="ajax/maps.html">OpenStreetMap</a></li>
@@ -305,7 +305,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-picture-o"></i>
-                        <span class="hidden-xs">Gallery</span>
+                        <span class="hidden-xs">Menu 1</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="ajax-link" href="ajax/gallery_simple.html">Simple Gallery</a></li>
@@ -315,19 +315,19 @@
                 <li>
                     <a class="ajax-link" href="ajax/typography.html">
                         <i class="fa fa-font"></i>
-                        <span class="hidden-xs">Typography</span>
+                        <span class="hidden-xs">Menu 1</span>
                     </a>
                 </li>
                 <li>
                     <a class="ajax-link" href="ajax/calendar.html">
                         <i class="fa fa-calendar"></i>
-                        <span class="hidden-xs">Calendar</span>
+                        <span class="hidden-xs">Menu 1</span>
                     </a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">
                         <i class="fa fa-picture-o"></i>
-                        <span class="hidden-xs">Multilevel menu</span>
+                        <span class="hidden-xs">Menu 1</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#">First level menu</a></li>
@@ -422,5 +422,24 @@
 <script src="plugins/tinymce/jquery.tinymce.min.js"></script>
 <!-- All functions for this theme + document.ready processing -->
 <script src="js/devoops.js"></script>
+<script type="text/javascript">
+    // Array for random data for Sparkline
+    var sparkline_arr_1 = SparklineTestData();
+    var sparkline_arr_2 = SparklineTestData();
+    var sparkline_arr_3 = SparklineTestData();
+    $(document).ready(function() {
+        // Make all JS-activity for dashboard
+        DashboardTabChecker();
+        // Load Knob plugin and run callback for draw Knob charts for dashboard(tab-servers)
+        LoadKnobScripts(DrawKnobDashboard);
+        // Load Sparkline plugin and run callback for draw Sparkline charts for dashboard(top of dashboard + plot in tables)
+        LoadSparkLineScript(DrawSparklineDashboard);
+        // Load Morris plugin and run callback for draw Morris charts for dashboard
+        LoadMorrisScripts(MorrisDashboard);
+        // Make beauty hover in table
+        $("#ticker-table").beautyHover();
+    });
+</script>
+
 </body>
 </html>
